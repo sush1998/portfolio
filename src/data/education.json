@@ -1,0 +1,19 @@
+[
+    {
+      "institution": "Drexel University",
+      "degree": "Master of Science in Information Systems",
+      "location": "Philadelphia, PA",
+      "startDate": "2023",
+      "endDate": "2025",
+      "courses": ["Web Systems", "Data Mining", "AI & NLP", "Cloud Computing"]
+    },
+    {
+      "institution": "Savitribai Phule Pune University",
+      "degree": "Bachelor of Engineering in Computer Engineering",
+      "location": "Pune, India",
+      "startDate": "2016",
+      "endDate": "2020",
+      "courses": ["Operating Systems", "Database Management", "Computer Networks"]
+    }
+  ]
+  
