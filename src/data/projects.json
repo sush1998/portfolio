@@ -1,21 +1,29 @@
 [
     {
-      "title": "Figma Portfolio Mockup",
-      "description": "Designed a responsive portfolio layout in Figma.",
-      "link": "https://github.com/sush1998/figma-mockup",
-      "live": "https://your-live-site.com",
-      "image": "/images/figma-mockup.png",
-      "tech": ["Figma", "UX", "Design"],
+      "title": "Cook Ease",
+      "description": "The project involved designing and prototyping a recipe management app using Figma, focusing on dietary restrictions, budget management, and nutrition tracking, and conducting market research to identify user pain points.",
+      "live": "https://www.figma.com/design/N32NjsJTziTOhaQokWpGm6/CookEase-Prototype?node-id=1-42&p=f&m=dev",
+      "category": ["Figma"],
+      "techStack": ["Figma", "UX", "Design"],
       "date": "2024-12-10"
     },
     {
-      "title": "Database Project",
-      "description": "Normalized schema and SQL queries for a school DB.",
+      "title": "Tech Support Pro",
+      "description": "Implemented a 9-table relational database schema using Oracle Database 19c for ticketing system management. Created Entity-Relationship Diagram and optimized 3NF normalization for data integrity. Developed SQL queries for SLA compliance monitoring and performance tracking.",
       "link": "https://github.com/sush1998/db-project",
-      "live": "",
-      "image": "/images/db-project.png",
-      "tech": ["PostgreSQL", "ERD", "Normalization"],
+      "live": "https://docs.google.com/document/d/1FRQXNBksc-sTHMnEUy6fnVt_4hzvgKHHI_fyhjaL4Og/edit?usp=sharing",
+      "category": ["Database"],
+      "techStack": ["MySQL", "ERD", "Normalization"],
       "date": "2024-10-01"
+    },
+    {
+      "title": "Xfinity SmartMatch",
+      "description": "AI-powered product recommendation system for Xfinity users, built during Philly Codefest 2025.",
+      "category": ["AI", "Web Development"],
+      "techStack": ["Gemini API", "Streamlit", "OpenAI API", "Python"],
+      "github": "https://github.com/sush1998/Xfinity-Smartmatch",
+      "live": "https://xfinity-smartmatch.streamlit.app/",
+      "date": "2025-03-10"
     }
   ]
   
