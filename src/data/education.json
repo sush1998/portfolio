@@ -5,6 +5,7 @@
       "location": "Philadelphia, PA",
       "startDate": "2023",
       "endDate": "2025",
+      "image": "/logo/Drexel_CCI.png",
       "courses": ["Web Systems", "Data Mining", "AI & NLP", "Cloud Computing"]
     },
     {
@@ -13,6 +14,7 @@
       "location": "Pune, India",
       "startDate": "2016",
       "endDate": "2020",
+      "image": "/logo/SPPU2.png",
       "courses": ["Operating Systems", "Database Management", "Computer Networks"]
     }
   ]

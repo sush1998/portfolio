@@ -1,19 +1,52 @@
 [
-    {
-      "title": "Graduate Student Assistant",
-      "company": "Drexel University - Office of Disability Resources",
-      "location": "Philadelphia, PA",
-      "startDate": "2024-01",
-      "endDate": "Present",
-      "description": "Administer exams and support logistics for students with disabilities."
-    },
-    {
-      "title": "Assistant System Engineer",
-      "company": "Tata Consultancy Services",
-      "location": "India",
-      "startDate": "2021-07",
-      "endDate": "2023-08",
-      "description": "Provided technical support and automation solutions for client systems."
-    }
-  ]
-  
+  {
+    "title": "Graduate Student Assistant",
+    "company": "Drexel University - Office of Disability Resources",
+    "location": "Philadelphia, PA",
+    "startDate": "2024-01",
+    "endDate": "Present",
+    "description": "Provided exam administration, student support, and logistics coordination for Drexel's Office of Disability Resources.",
+    "image": "/logo/Drexel.png",
+    "responsibilities": [
+      "Administered and proctored exams while ensuring university policy compliance and student accommodations.",
+      "Collaborated with the team to optimize resource allocation and exam logistics.",
+      "Supported students empathetically during exams, addressing accessibility needs.",
+      "Maintained accurate documentation of exam logistics and student requests.",
+      "Assisted with intake and setup of assistive technology.",
+      "Resolved real-time issues during exams to ensure minimal disruption."
+    ]
+  },
+  {
+    "title": "Assistant System Engineer",
+    "company": "Tata Consultancy Services",
+    "location": "India",
+    "startDate": "2021-07",
+    "endDate": "2023-08",
+    "description": "Provided end-to-end application support and automation solutions for an FX trading platform with a focus on performance, reliability, and customer satisfaction.",
+    "image": "/logo/TCS.png",
+    "responsibilities": [
+      "Ensured 93% system uptime by managing servers, middleware, and performing post-deployment validations.",
+      "Reduced critical incident resolution time by 2 hours and automated monitoring to catch issues 25% faster.",
+      "Handled 50+ daily customer tickets with 96% satisfaction, using internal ticketing tools for accountability.",
+      "Built and maintained automated sanity testing workflows, reducing post-deployment incidents by 50%.",
+      "Worked cross-functionally with Sales, Risk, and Dev teams to resolve high-impact platform issues.",
+      "Documented workflows and performed account access controls to support security and compliance efforts."
+    ]
+  },
+  {
+    "title": "Product Engineering Fellow",
+    "company": "Crio.Do",
+    "location": "Remote",
+    "startDate": "2020-08",
+    "endDate": "2021-01",
+    "description": "Completed an intensive online fellowship to build full-stack web applications using real-world tools, practices, and workflows.",
+    "image": "/logo/CRIO_DO.jpeg",
+    "responsibilities": [
+  "Built QKART, an e-commerce platform with authentication, cart, and secure checkout using React and REST APIs.",
+  "Designed a fully responsive UI using Material UI and custom CSS, ensuring cross-device compatibility and accessibility.",
+  "Led Agile sprints and collaborated in a 6-member team using GitLab and Slack for project integration and version control.",
+  "Optimized frontend performance with React Hooks and Router while integrating backend services for seamless data flow."]
+  }
+]
+
+

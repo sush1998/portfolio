@@ -2,20 +2,26 @@ import React, { useState } from 'react';
 import Hero from './Hero';
 import Projects from './Projects';
 import Experience from './Experience';
+import Resume from './Resume';
+import Contact from './Contact';
 
 const ViewSwitcher = () => {
   const [activeView, setActiveView] = useState('Home');
 
   const renderView = () => {
     switch (activeView) {
-      case 'Home':
-        return <Hero />;
-      case 'Projects':
-        return <Projects />;
-      case 'Experience':
-        return <Experience />;
-      default:
-        return <Hero />;
+        case 'Home':
+            return <Hero />;
+        case 'Projects':
+            return <Projects />;
+        case 'Work & Education':
+            return <Experience />;
+        case 'Resume':
+            return <Resume />;
+        case 'Contact':
+            return <Contact />;
+        default:
+            return <Hero />;
     }
   };
 
@@ -23,7 +29,7 @@ const ViewSwitcher = () => {
     <>
       {/* Fixed Tab Navigation */}
       <div style={styles.navbar}>
-        {['Home', 'Projects', 'Experience'].map((label) => (
+        {['Home', 'Projects', 'Work & Education','Resume','Contact'].map((label) => (
           <button
             key={label}
             onClick={() => setActiveView(label)}
@@ -39,7 +45,7 @@ const ViewSwitcher = () => {
 
       {/* Fullscreen View Area */}
       <div id="view-wrapper" style={{
-        height: '100%',
+        height: 'calc(100vh - 4.5rem)', 
         overflowY: 'auto',
         marginTop: '4.5rem',
         position: 'relative',
@@ -77,7 +83,7 @@ const styles = {
   },
   viewWrapper: {
     marginTop: '4.5rem',
-    height: 'calc(100vh - 4.5rem)',
+    minHeight: 'calc(100vh - 4.5rem)',
     overflowY: 'auto',
     position: 'relative',
   }
