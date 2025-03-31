@@ -36,7 +36,7 @@ const Hero = ({ setActiveView }) => {
         </motion.div>
 
         <motion.img
-          src="public/Hero.png"
+          src="https://raw.githubusercontent.com/sush1998/portfolio-website/main/public/Hero.png"
           alt="Sushant Mahalle"
           style={styles.image}
           initial={{ opacity: 0, scale: 0.9 }}

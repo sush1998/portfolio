@@ -2,7 +2,7 @@ import React from 'react';
 import theme from '../styles/theme';
 
 const Resume = () => {
-  const resumeUrl = 'public/Sushant_Mahalle_Resume.pdf';
+  const resumeUrl = 'https://raw.githubusercontent.com/sush1998/portfolio-website/main/public/Sushant_Mahalle_Resume.pdf';
 
   return (
     <section style={styles.section}>

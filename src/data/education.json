@@ -5,7 +5,7 @@
       "location": "Philadelphia, PA",
       "startDate": "2023",
       "endDate": "2025",
-      "image": "public/logo/Drexel_CCI.png",
+      "image": "https://raw.githubusercontent.com/sush1998/portfolio-website/main/public/logo/Drexel_CCI.png",
       "courses": ["Web Systems", "Database Management", "Data Analysis", "Introduction to Cybersecurity","Human Computer Interaction"]
     },
     {
@@ -14,7 +14,7 @@
       "location": "Pune, India",
       "startDate": "2016",
       "endDate": "2020",
-      "image": "public/logo/SPPU2.png"
+      "image": "https://raw.githubusercontent.com/sush1998/portfolio-website/main/public/logo/SPPU2.png"
     }
   ]
   

@@ -6,7 +6,7 @@
     "startDate": "2024-01",
     "endDate": "Present",
     "description": "Provided exam administration, student support, and logistics coordination for Drexel's Office of Disability Resources.",
-    "image": "public/logo/Drexel.png",
+    "image": "https://raw.githubusercontent.com/sush1998/portfolio-website/main/public/logo/Drexel.png",
     "responsibilities": [
       "Administered and proctored exams while ensuring university policy compliance and student accommodations.",
       "Collaborated with the team to optimize resource allocation and exam logistics.",
@@ -23,7 +23,7 @@
     "startDate": "2021-07",
     "endDate": "2023-08",
     "description": "Provided end-to-end application support and automation solutions for an FX trading platform with a focus on performance, reliability, and customer satisfaction.",
-    "image": "public/logo/TCS.png",
+    "image": "https://raw.githubusercontent.com/sush1998/portfolio-website/main/public/logo/TCS.png",
     "responsibilities": [
       "Ensured 93% system uptime by managing servers, middleware, and performing post-deployment validations.",
       "Reduced critical incident resolution time by 2 hours and automated monitoring to catch issues 25% faster.",
@@ -40,7 +40,7 @@
     "startDate": "2020-08",
     "endDate": "2021-01",
     "description": "Completed an intensive online fellowship to build full-stack web applications using real-world tools, practices, and workflows.",
-    "image": "public/logo/CRIO_DO.jpeg",
+    "image": "https://raw.githubusercontent.com/sush1998/portfolio-website/main/public/logo/CRIO_DO.jpeg",
     "responsibilities": [
   "Built QKART, an e-commerce platform with authentication, cart, and secure checkout using React and REST APIs.",
   "Designed a fully responsive UI using Material UI and custom CSS, ensuring cross-device compatibility and accessibility.",
