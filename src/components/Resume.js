@@ -1,13 +1,13 @@
 import React from 'react';
+import theme from '../styles/theme';
 
 const Resume = () => {
-    const resumeUrl = '/Sushant_Mahalle_Resume.pdf'; 
-  
-    return (
-      <section style={styles.container}>
-        <h2>📄 My Resume</h2>
-  
-        <div style={styles.buttons}>
+  const resumeUrl = '/Sushant_Mahalle_Resume.pdf';
+
+  return (
+    <section style={styles.section}>
+      <div style={styles.container}>
+        <div style={styles.buttonContainer}>
           <a href={resumeUrl} target="_blank" rel="noopener noreferrer" style={styles.button}>
             👀 View Resume
           </a>
@@ -15,43 +15,55 @@ const Resume = () => {
             ⬇️ Download PDF
           </a>
         </div>
-  
-        <iframe
-          src={resumeUrl}
-          style={styles.iframe}
-          title="Resume Preview"
-        ></iframe>
-      </section>
-    );
-  };
-  
+      </div>
+
+      <iframe
+        src={resumeUrl}
+        style={styles.iframe}
+        title="Resume Preview"
+      ></iframe>
+    </section>
+  );
+};
 
 const styles = {
-  container: {
-    padding: '2rem',
-    height: '100%',
-    boxSizing: 'border-box',
+  section: {
+    padding: '1rem',
+    background: 'linear-gradient(135deg, #F4F4F9 0%, #E6F7FB 100%)',
+    color: theme.colors.text,
+    textAlign: 'center',
   },
-  buttons: {
-    marginBottom: '1.5rem',
+  container: {
+    padding: '0',
+    boxSizing: 'border-box',
+    textAlign: 'center',
+  },
+  buttonContainer: {
     display: 'flex',
-    gap: '1rem',
+    justifyContent: 'center',
+    padding: '1rem',
     flexWrap: 'wrap',
+    gap: theme.spacing.gapLarge,
   },
   button: {
-    padding: '0.6rem 1rem',
-    backgroundColor: '#0077ff',
-    color: '#fff',
+    padding: '0.75rem 1.25rem',
+    backgroundColor: theme.colors.primary,
+    color: theme.colors.text,
     border: 'none',
-    borderRadius: '6px',
+    borderRadius: theme.borderRadius.small,
     cursor: 'pointer',
     textDecoration: 'none',
+    fontSize: theme.fontSize.text,
+    transition: theme.transitions.default,
   },
   iframe: {
-    width: '100%',
-    height: '70vh',
-    border: '1px solid #ccc',
-    borderRadius: '8px',
+    padding: '2%',
+    width: '96%',
+    height: '100vh',
+    border: 'none',
+    borderRadius: theme.borderRadius.medium,
+    backgroundColor: theme.colors.backgroundSolid,
+    boxShadow: theme.shadow.medium,
   },
 };
 

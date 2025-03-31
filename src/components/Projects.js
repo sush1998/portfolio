@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import customProjects from '../data/projects.json';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import theme from '../styles/theme';
 
 const Projects = () => {
   const [githubRepos, setGithubRepos] = useState([]);
@@ -32,9 +33,8 @@ const Projects = () => {
 
   return (
     <section id="projects" style={styles.section}>
-      <h2 style={styles.heading}>💻 Projects</h2>
+      <p style={styles.heading}>💻 Projects</p>
 
-      {/* Custom Projects */}
       <div style={styles.grid}>
         {sortedCustomProjects.map((proj, i) => (
           <div key={i} style={styles.card}>
@@ -63,10 +63,9 @@ const Projects = () => {
         ))}
       </div>
 
-      {/* GitHub Projects */}
       {githubRepos.length > 0 && (
         <>
-          <h2 style={{ ...styles.heading, marginTop: '3rem' }}>🌐 GitHub Repositories</h2>
+          <p style={styles.heading}>🌐 GitHub Repositories</p>
           <div style={styles.grid}>
             {githubRepos.map((repo) => (
               <div key={repo.id} style={styles.card}>
@@ -98,65 +97,77 @@ const Projects = () => {
 };
 
 const styles = {
-  section: { padding: '4rem 2rem', marginBottom: '4.5rem' },
-  heading: { fontSize: '2rem', marginBottom: '1rem' },
+  section: {
+    padding:'1rem',
+    background: 'linear-gradient(135deg, #F4F4F9 0%, #E6F7FB 100%)',
+    color: theme.colors.text,
+  },
+  heading: {
+    fontSize: theme.fontSize.heading,
+    marginBottom: '1.5rem',
+    textAlign: 'center'
+  },
   grid: {
     display: 'flex',
     flexWrap: 'wrap',
-    gap: '1.5rem',
+    gap: theme.spacing.gapLarge,
     justifyContent: 'center',
   },
   card: {
     flex: '1 1 300px',
-    border: '1px solid #ddd',
-    borderRadius: '8px',
-    padding: '1rem',
-    backgroundColor: '#f9f9f9',
+    backgroundColor: theme.colors.card,
+    border: `1px solid ${theme.colors.border}`,
+    borderRadius: theme.borderRadius.medium,
+    padding: theme.spacing.cardPadding,
+    boxShadow: theme.shadow.medium,
+    color: theme.colors.text,
   },
   tagWrapper: {
-    marginTop: '0.5rem',
-    marginBottom: '0.5rem',
+    marginTop: theme.spacing.gapSmall,
+    marginBottom: theme.spacing.gapSmall,
   },
   tag: {
     display: 'inline-block',
-    backgroundColor: '#007bff',
-    color: '#fff',
-    fontSize: '0.75rem',
+    backgroundColor: theme.colors.primary,
+    color: theme.colors.text,
+    fontSize: theme.fontSize.small,
     padding: '0.3rem 0.6rem',
     borderRadius: '12px',
     marginRight: '0.5rem',
     marginBottom: '0.4rem',
   },
   buttonGroup: {
-    marginTop: '1rem',
+    marginTop: theme.spacing.gapMedium,
     display: 'flex',
-    gap: '0.5rem',
+    gap: theme.spacing.gapSmall,
+    flexWrap: 'wrap',
   },
   button: {
     display: 'inline-flex',
     alignItems: 'center',
     gap: '0.4rem',
-    backgroundColor: '#007bff',
-    color: '#fff',
+    backgroundColor: theme.colors.primary,
+    color: theme.colors.text,
     padding: '0.5rem 1rem',
-    borderRadius: '6px',
+    borderRadius: theme.borderRadius.small,
     textDecoration: 'none',
-    fontSize: '0.9rem',
+    fontSize: theme.fontSize.small,
+    transition: theme.transitions.default,
   },
   icon: {
     fontSize: '1rem',
   },
   date: {
-    fontSize: '0.75rem',
-    color: '#666',
+    fontSize: theme.fontSize.small,
+    color: theme.colors.lightText,
     marginTop: '0.5rem',
   },
   thumbnail: {
     width: '100%',
     height: '180px',
     objectFit: 'cover',
-    borderRadius: '6px',
-    marginBottom: '0.75rem'
+    borderRadius: theme.borderRadius.small,
+    marginBottom: '0.75rem',
   },
 };
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import workData from '../data/work.json';
 import educationData from '../data/education.json';
+import theme from '../styles/theme';
 
 const Experience = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -17,12 +18,12 @@ const Experience = () => {
 
   return (
     <section style={styles.section}>
-  
       <div style={styles.twoColumn}>
+        {/* Work Column */}
         <div style={styles.column}>
-          <h3 style={styles.subheading}>💼 Work Experience</h3>
+          <h3 style={styles.heading}>💼 Work Experience</h3>
           {workData.map((job, i) => (
-            <div key={i} style={{ ...styles.card, cursor: 'pointer' }} onClick={() => handleToggle(i)}>
+            <div key={i} title="Click to expand and see responsibilities" style={{ ...styles.card, cursor: 'pointer' }} onClick={() => handleToggle(i)}>
               <div style={styles.cardContent}>
                 <img src={job.image} alt={job.company} style={styles.image} />
                 <div>
@@ -32,7 +33,7 @@ const Experience = () => {
                   <p>{job.description}</p>
                 </div>
               </div>
-  
+
               {expandedIndex === i && (
                 <div style={styles.expand}>
                   {job.responsibilities && (
@@ -45,16 +46,15 @@ const Experience = () => {
                       </ul>
                     </div>
                   )}
-
                 </div>
               )}
             </div>
           ))}
         </div>
-  
+
         {/* Education Column */}
         <div style={styles.column}>
-          <h3 style={styles.subheading}>🎓 Education</h3>
+          <h3 style={styles.heading}>🎓 Education</h3>
           {educationData.map((edu, i) => (
             <div key={i} style={styles.card}>
               <div style={styles.cardContent}>
@@ -74,21 +74,22 @@ const Experience = () => {
       </div>
     </section>
   );
-  
 };
 
 const styles = {
   section: {
-    padding: '1rem 2rem 0rem',
-    display: 'flex',
+    padding:'1rem',
+    background: 'linear-gradient(135deg, #F4F4F9 0%, #E6F7FB 100%)',
+    color: theme.colors.text,
   },
   card: {
-    marginBottom: '1rem',
-    padding: '0.5rem',
-    backgroundColor: '#f9f9f9',
-    borderRadius: '8px',
-    border: '1px solid #ddd',
-    transition: 'all 0.3s ease',
+    marginBottom: '1.5rem',
+    padding: theme.spacing.cardPadding,
+    backgroundColor: theme.colors.card,
+    border: `1px solid ${theme.colors.border}`, 
+    borderRadius: theme.borderRadius.medium,
+    boxShadow: theme.shadow.light,
+    transition: theme.transitions.default,
   },
   cardContent: {
     display: 'flex',
@@ -98,50 +99,36 @@ const styles = {
     width: '10rem',
     height: '10rem',
     objectFit: 'contain',
-    borderRadius: '6px',
+    borderRadius: theme.borderRadius.small,
     backgroundColor: '#fff',
     padding: '0.25rem',
-    border: '1px solid #ccc',
-    margin:'1.5rem'
+    border: `1px solid ${theme.colors.lightText}`,
+    margin: '1.5rem',
   },
   respBlock: {
-    padding:'1rem 2rem',
-    marginBottom: '0.1rem',
+    padding: '0rem 2rem',
   },
   bulletList: {
-    paddingLeft: '1rem',
+    paddingLeft: '1.2rem',
     marginTop: '0.5rem',
-    lineHeight: '1rem',
-  },
-  certList: {
-    paddingLeft: '2rem',
-    marginTop: '0.5rem',
-    lineHeight: '1rem',
-  },
-  certLink: {
-    color: '#0077ff',
-    textDecoration: 'none',
-    display: 'inline-flex',
-    alignItems: 'center',
+    lineHeight: '1.6rem',
   },
   twoColumn: {
     display: 'flex',
     flexWrap: 'wrap',
-    gap: '2rem',
+    gap: theme.spacing.gapLarge,
     justifyContent: 'space-between',
   },
-  
   column: {
-    flex: '1 1 25%',
+    flex: '1 1 ',
     minWidth: '300px',
   },
-  
   subheading: {
-    fontSize: '1.25rem',
+    fontSize: theme.fontSize.subheading,
     marginBottom: '1rem',
-    color: '#0077ff',
-  },
-  
+    color: theme.colors.primary,
+    fontWeight: theme.fontWeight.bold,
+  }
 };
 
 export default Experience;

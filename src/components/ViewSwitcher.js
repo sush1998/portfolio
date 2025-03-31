@@ -4,38 +4,39 @@ import Projects from './Projects';
 import Experience from './Experience';
 import Resume from './Resume';
 import Contact from './Contact';
+import theme from '../styles/theme';
 
 const ViewSwitcher = () => {
   const [activeView, setActiveView] = useState('Home');
 
   const renderView = () => {
     switch (activeView) {
-        case 'Home':
-            return <Hero />;
-        case 'Projects':
-            return <Projects />;
-        case 'Work & Education':
-            return <Experience />;
-        case 'Resume':
-            return <Resume />;
-        case 'Contact':
-            return <Contact />;
-        default:
-            return <Hero />;
+      case 'Home':
+        return <Hero setActiveView={setActiveView} />;
+      case 'Projects':
+        return <Projects />;
+      case 'Work & Education':
+        return <Experience />;
+      case 'Resume':
+        return <Resume />;
+      case 'Contact':
+        return <Contact />;
+      default:
+        return <Hero />;
     }
   };
 
   return (
     <>
-      {/* Fixed Tab Navigation */}
+      {/*Nav Tab */}
       <div style={styles.navbar}>
-        {['Home', 'Projects', 'Work & Education','Resume','Contact'].map((label) => (
+        {['Home', 'Projects', 'Work & Education', 'Resume', 'Contact'].map((label) => (
           <button
             key={label}
             onClick={() => setActiveView(label)}
             style={{
               ...styles.navButton,
-              ...(activeView === label ? styles.activeButton : {})
+              ...(activeView === label ? styles.activeButton : {}),
             }}
           >
             {label}
@@ -43,15 +44,19 @@ const ViewSwitcher = () => {
         ))}
       </div>
 
-      {/* Fullscreen View Area */}
-      <div id="view-wrapper" style={{
-        height: 'calc(100vh - 4.5rem)', 
-        overflowY: 'auto',
-        marginTop: '4.5rem',
-        position: 'relative',
-        }}>
+      <div
+        id="view-wrapper"
+        style={{
+          height: 'calc(100vh - 4.5rem)',
+          marginTop: '4.5rem',
+          position: 'relative',
+          overflowY: 'scroll',
+          scrollbarWidth: 'none', 
+          msOverflowStyle: 'none',
+        '&::-webkit-scrollbar': {display: 'none', }}}>
         {renderView()}
-        </div>    </>
+      </div>
+    </>
   );
 };
 
@@ -61,32 +66,33 @@ const styles = {
     top: 0,
     left: 0,
     right: 0,
-    backgroundColor: '#f9f9f9',
-    borderBottom: '1px solid #ccc',
+    backgroundColor: '#F0F4F8',
+    borderBottom: `1px solid ${theme.colors.lightText}`,
     display: 'flex',
     justifyContent: 'center',
-    gap: '2rem',
+    gap: theme.spacing.gapLarge,
     padding: '1rem',
     zIndex: 1000,
+    boxShadow: theme.shadow.light,
+    fontWeight:'900',
   },
   navButton: {
+    all:'unset',
     background: 'none',
     border: 'none',
-    fontSize: '1rem',
+    fontSize: theme.fontSize.subheading, 
+    fontWeight: theme.fontWeight.bold,  
     cursor: 'pointer',
     padding: '0.5rem 1rem',
+    color: theme.colors.lightText,
+    transition: theme.transitions.default,
   },
   activeButton: {
-    borderBottom: '2px solid #0077ff',
-    fontWeight: 'bold',
-    color: '#0077ff',
+    borderBottom: `2px solid ${theme.colors.primary}`,
+    color: '#000000',
+    fontWeight: theme.fontWeight.bold,
   },
-  viewWrapper: {
-    marginTop: '4.5rem',
-    minHeight: 'calc(100vh - 4.5rem)',
-    overflowY: 'auto',
-    position: 'relative',
-  }
+  
 };
 
 export default ViewSwitcher;
