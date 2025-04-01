@@ -2,7 +2,11 @@ import React from 'react';
 import theme from '../styles/theme';
 
 const Resume = () => {
-  const resumeUrl = 'https://raw.githubusercontent.com/sush1998/portfolio-website/main/public/Sushant_Mahalle_Resume.pdf';
+  const resumeUrl = 'https://drive.google.com/file/d/1R_-lGn0sHyeOVNj0s-nGHoWhMZxpDZkM/preview'
+  const downloadUrl = "https://drive.google.com/uc?export=download&id=1R_-lGn0sHyeOVNj0s-nGHoWhMZxpDZkM";
+
+
+  
 
   return (
     <section style={styles.section}>
@@ -11,7 +15,7 @@ const Resume = () => {
           <a href={resumeUrl} target="_blank" rel="noopener noreferrer" style={styles.button}>
             👀 View Resume
           </a>
-          <a href={resumeUrl} download style={styles.button}>
+          <a href={downloadUrl} download style={styles.button}>
             ⬇️ Download PDF
           </a>
         </div>
