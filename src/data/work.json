@@ -17,7 +17,7 @@
     ]
   },
   {
-    "title": "Assistant System Engineer",
+    "title": "Technical Support Specialist L2",
     "company": "Tata Consultancy Services",
     "location": "India",
     "startDate": "2021-07",
@@ -34,11 +34,11 @@
     ]
   },
   {
-    "title": "Product Engineering Fellow",
+    "title": "Fellowship in Software Development",
     "company": "Crio.Do",
     "location": "Remote",
-    "startDate": "2020-08",
-    "endDate": "2021-01",
+    "startDate": "2023-12",
+    "endDate": "2024-07",
     "description": "Completed an intensive online fellowship to build full-stack web applications using real-world tools, practices, and workflows.",
     "image": "https://raw.githubusercontent.com/sush1998/portfolio-website/main/public/logo/CRIO_DO.jpeg",
     "responsibilities": [
